@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Titre</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="Hover-master/css/hover-min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  <title>titre</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      color: black;
+    }
+
+    .main-image {
+      grid-column-end: span 2;
+      position:relative;
+    }
+
+    .main-text {
+      grid-column-end: span 2;
+    }
+
+    @media screen and (min-width: 300px) {
+      .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-auto-rows: 200px; */
+        grid-gap: 100px;
+      }
+
+    }
+
+
+    @media screen and (min-width: 600px) {
+
+      .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-auto-rows: 200px; */
+        grid-gap: 100px;
+      }
+
+      .container {
+        position: relative;
+      }
+
+    }
+
+
+
+    h1 {
+      font-weight: 900;
+      font-size: 70px;
+      margin-top: 15vh;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .rond{
+      width:100px;
+      height:100px;
+      background-color: red;
+      z-index: 5;
+      position: absolute;
+      top:10px;
+      left:10px;
+      border-radius: 100%;
+    }
+
+    @media screen and (max-width: 600px) {}
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="container main-image">
+      <img src="a.jpg">
+      <div class="rond hvr-grow">
+      </div>
+    </div>
+    <div class="container main-text">
+      <h1><i>PATH<br>FINDER</i></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="container">
+      <h3>âge</h3>
+      <h2>36 ans</h2>
+    </div>
+    <div class="container">
+      <h3>âge</h3>
+      <h2>36 ans</h2>
+    </div>
+    <div class="container">
+      <h3>âge</h3>
+      <h2>36 ans</h2>
+    </div>
+    <div class="container">
+      <h3>âge</h3>
+      <h2>36 ans</h2>
+    </div>
+  </div>
+
+
+
+  </main>
+
+
+</body>
+
+</html>
