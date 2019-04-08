@@ -26,7 +26,7 @@
     }
 
     .main-image {
-      grid-column-end: span 2;
+
       position:relative;
 		display: flex;
 		justify-content: center
@@ -38,10 +38,7 @@
 		max-height: 600px;
 		object-fit: contain;  
 	  }
-    .main-text {
-      grid-column-end: span 2;
-		align-self: end;
-    }
+
 
     @media screen and (min-width: 300px) {
       .main {
@@ -51,18 +48,23 @@
 /*        grid-gap: 100px;*/
 		  padding: 5vw;
       }
-
+		 .infos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-auto-rows: 200px; */
+/*        grid-gap: 100px;*/
+			 
+			
+      }
+		
     }
 
 
     @media screen and (min-width: 600px) {
 
-      .main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        /* grid-auto-rows: 200px; */
-/*        grid-gap: 100px;*/
-      }
+		.main-image{
+			grid-row: span 2
+		}
 
       .container {
         position: relative;
@@ -95,18 +97,31 @@
     p {
       font-size: 14px;
     }
-
-    .rond{
-      width:100px;
-      height:100px;
-      background-color: red;
-      z-index: 5;
+	  .target {
+		  z-index: 5;
       position: absolute;
       top:10px;
       left:10px;
-      border-radius: 100%;
+	  }
+	  
+    .target::before{
+      width:15px;
+      height:15px;
+      background-color: green;
+      transform: rotate(45deg);
+		border: solid 6px;
+		box-shadow: 0 0 0 6px green ;
+		content:"";
     }
-
+	  .target:{
+		  background-color: red;
+	  }
+	  .target:hover .super-pouvoir{
+		  display: block;
+	  }
+	  .super-pouvoir{
+		  display: none;
+	  }
     @media screen and (max-width: 600px) {}
   </style>
 </head>
@@ -115,34 +130,42 @@
   <div class="main">
     <div class="container main-image">
       <img src="ASSETS/IMG/shaim.png">
-      <div class="rond hvr-grow">
+      <div class="target hvr-grow">
+		  <div class="super-pouvoir">
+			  <h3>Mega Force</h3>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		  </div>
       </div>
     </div>
+	  	
     <div class="container main-text">
       <h1><i>PATH<br>FINDER</i></h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
         aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
+		</div>
+<div class="infos">
+	
 
-    <div class="container">
+    <div>
       <h3>âge</h3>
       <h2>36 ans</h2>
     </div>
-    <div class="container">
+    <div>
       <h3>âge</h3>
       <h2>36 ans</h2>
     </div>
-    <div class="container">
+    <div>
       <h3>âge</h3>
       <h2>36 ans</h2>
     </div>
-    <div class="container">
+    <div>
       <h3>âge</h3>
       <h2>36 ans</h2>
     </div>
 		    </div>
-  </div>
 
+	  </div>
 
 </body>
 
