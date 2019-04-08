@@ -13,11 +13,13 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		margin: 0;
+		width: 100%;
+		height: 100%;
     }
 
-    img {
-      max-width: 100%;
-    }
+   
 
     p {
       color: black;
@@ -26,10 +28,19 @@
     .main-image {
       grid-column-end: span 2;
       position:relative;
+		display: flex;
+		justify-content: center
+/*		align-items: flex-end;*/
     }
-
+	  .main-image img{
+		  
+		max-width: 100%;
+		max-height: 600px;
+		object-fit: contain;  
+	  }
     .main-text {
       grid-column-end: span 2;
+		align-self: end;
     }
 
     @media screen and (min-width: 300px) {
@@ -37,7 +48,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         /* grid-auto-rows: 200px; */
-        grid-gap: 100px;
+/*        grid-gap: 100px;*/
+		  padding: 5vw;
       }
 
     }
@@ -49,12 +61,15 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         /* grid-auto-rows: 200px; */
-        grid-gap: 100px;
+/*        grid-gap: 100px;*/
       }
 
       .container {
         position: relative;
       }
+		.main-image{
+			max-height: 600px;
+		}
 
     }
 
@@ -63,7 +78,6 @@
     h1 {
       font-weight: 900;
       font-size: 70px;
-      margin-top: 15vh;
     }
 
     h2 {
@@ -100,7 +114,7 @@
 <body>
   <div class="main">
     <div class="container main-image">
-      <img src="a.jpg">
+      <img src="ASSETS/IMG/shaim.png">
       <div class="rond hvr-grow">
       </div>
     </div>
@@ -109,7 +123,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
         aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-    </div>
+
     <div class="container">
       <h3>âge</h3>
       <h2>36 ans</h2>
@@ -126,11 +140,8 @@
       <h3>âge</h3>
       <h2>36 ans</h2>
     </div>
+		    </div>
   </div>
-
-
-
-  </main>
 
 
 </body>
