@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link href="Hover-master/css/hover-min.css" rel="stylesheet">
+<!--  <link href="Hover-master/css/hover-min.css" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
   <title>titre</title>
   <style>
@@ -98,10 +98,11 @@
       font-size: 14px;
     }
 	  .target {
-		  z-index: 5;
+		 
       position: absolute;
-      top:10px;
-      left:10px;
+      top:70%;
+      left:40%;
+	
 	  }
 	  
     .target::before{
@@ -120,7 +121,18 @@
 		  display: block;
 	  }
 	  .super-pouvoir{
+		 position: relative;
 		  display: none;
+		  background-color: dimgrey;
+		  padding: 5px;
+		  z-index:99;
+	
+	  }
+	  .super-pouvoir p{
+		   color: white;
+	  }
+	  .super-pouvoir h3 {
+		  color: lightgreen;
 	  }
     @media screen and (max-width: 600px) {}
   </style>
@@ -131,6 +143,12 @@
     <div class="container main-image">
       <img src="ASSETS/IMG/shaim.png">
       <div class="target hvr-grow">
+		  <div class="super-pouvoir">
+			  <h3>Mega Force</h3>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		  </div>
+      </div>
+	  <div class="target hvr-grow" style="top:20%; left:20%">
 		  <div class="super-pouvoir">
 			  <h3>Mega Force</h3>
 			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
